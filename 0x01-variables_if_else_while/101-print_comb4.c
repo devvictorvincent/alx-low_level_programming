@@ -1,0 +1,38 @@
+#include <stdio.h>
+/* betty style doc for function main goes there */
+/**
+ * main - main function
+ *
+ * Return: always 0
+ */
+
+int main(void)
+{
+	int i;
+	int n;
+	int j;
+
+	for (i = 0 ; i < 10 ; i++)
+	{
+		for (j = 1 ; j < 10 ; j++)
+		{
+			for (n = 2 ; n < 10 ; n++)
+			{
+
+				if (i < j && i != j && j < n)
+				{
+					putchar(i + '0');
+					putchar(j + '0');
+					putchar(n + '0');
+					if (i < 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
